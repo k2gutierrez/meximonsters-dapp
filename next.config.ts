@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {},
+
   webpack: (config, { webpack }) => {
     // 1. Permanently ignore ALL optional @x402 AI payment packages (EVM, Solana SVM, etc.)
     config.plugins.push(
